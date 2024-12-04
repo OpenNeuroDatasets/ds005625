@@ -10,3 +10,7 @@ Only one participant is included in this dataset.
 
 - Anatomical: T1w image (defaced)
 - Functional: A standard 6 minutes resting-state scan
+
+## Derivatives
+
+- fmriprep: preprocessed data using fMRIPrep
