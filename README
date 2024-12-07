@@ -58,7 +58,7 @@ Then run the analyzes as follows:
 ```bash
 $connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" --config "${config_dir}/method-schaeffer100_participant_level_config.yaml" && \
 $connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" --config "${config_dir}/method-aal_participant_level_config.yaml" && \
-$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" --config "${config_dir}/ds005625_harvardoxford_participant_level_config.yaml" && \
+$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" --config "${config_dir}/method-harvardoxford_participant_level_config.yaml" && \
 $connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" --config "${config_dir}/method-ICA_participant_level_config.yaml" && \
 $connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" --config "${config_dir}/method-seeds_participant_level_config.yaml" && \
 $connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" fmripost-aroma="${derivatives_dir}/fmripost-aroma" --config "${config_dir}/method-aroma_participant_level_config.yaml"  # Requires fmripost-aroma outputs
