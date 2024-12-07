@@ -42,7 +42,7 @@ fmripost-aroma $bids_dir ${derivatives_dir}/fmripost-aroma participant `--denois
 ```
 
 ### Analysis: connectomix
-*Note:* The following has been tested for connectomix version 1.0.0.
+*Note:* The following has been tested for connectomix version 1.0.1.
 
 First set-up path to connectomix script:
 ```bash
