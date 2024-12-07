@@ -1,5 +1,5 @@
 # Connectomix test dataset 1
-This dataset is designed to test features of Connectomix. For more information, please visit the GitHub repository:
+This dataset is designed to test features of connectomix. For more information, please visit the GitHub repository:
 
 [https://github.com/ln2t/connectomix](https://github.com/ln2t/connectomix)
 
@@ -42,6 +42,8 @@ fmripost-aroma $bids_dir ${derivatives_dir}/fmripost-aroma participant `--denois
 ```
 
 ### Analysis: connectomix
+*Note:* The following has been tested for connectomix version 1.0.0.
+
 First set-up path to connectomix script:
 ```bash
 connectomix_cmd='/path/to/connectomix/connectomix/connectomix.py'
@@ -54,14 +56,14 @@ config_dir='/data/ds005625/code/connectomix/config'
 
 Then run the analyzes as follows:
 ```bash
-$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --config "${config_dir}/ds005625_schaeffer100_participant_level_config.yaml"
-$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --config "${config_dir}/ds005625_aal_participant_level_config.yaml"
-$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --config "${config_dir}/ds005625_harvardoxford_participant_level_config.yaml"
-$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --config "${config_dir}/ds005625_ICA_participant_level_config.yaml"
-$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --config "${config_dir}/ds005625_seeds_participant_level_config.yaml"
-$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --config "${config_dir}/ds005625_aroma_participant_level_config.yaml"  # Requires fmripost-aroma outputs
+$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" --config "${config_dir}/ds005625_schaeffer100_participant_level_config.yaml"
+$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" --config "${config_dir}/ds005625_aal_participant_level_config.yaml"
+$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" --config "${config_dir}/ds005625_harvardoxford_participant_level_config.yaml"
+$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" --config "${config_dir}/ds005625_ICA_participant_level_config.yaml"
+$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" --config "${config_dir}/ds005625_seeds_participant_level_config.yaml"
+$connectomix_cmd ${bids_dir} ${derivatives_dir}/connectomix participant --derivatives fmriprep="${derivatives_dir}/fmriprep" --config "${config_dir}/ds005625_aroma_participant_level_config.yaml"  # Requires fmripost-aroma outputs
 ```
 
 **Notes**:
 - the ICA-based analysis does not make much sense in this case as there is only only participant. The software runs without crashing and without warning in that case, so make sure you understand what you're doing.
-- the seed-based analysis uses seeds specified in `${bids_dir}/code/connectomix/seeds/brain_and_cerebellum_seeds.tsv`. The exact path to use is specified in the corresponding config file, namely  `${config_dir}/ds005625_seeds_participant_level_config.yaml`, and must be adapted to match your paths.
+- the seed-based analysis uses seeds specified in `/code/ds005625/connectomix/seeds/brain_and_cerebellum_seeds.tsv`. The exact path to use is specified in the corresponding config file, namely `${config_dir}/ds005625_seeds_participant_level_config.yaml`, and must be adapted to match your paths.
