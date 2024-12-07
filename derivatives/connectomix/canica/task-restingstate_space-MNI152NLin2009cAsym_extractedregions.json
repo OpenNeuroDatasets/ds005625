@@ -1,0 +1,6 @@
+{
+    "threshold": 0.5,
+    "standardize": true,
+    "detrend": true,
+    "min_region_size": 50
+}
