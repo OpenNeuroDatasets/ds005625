@@ -1,0 +1,28 @@
+{
+    "Name": "fMRIPost-AROMA- ICA-AROMA Postprocessing Outputs",
+    "BIDSVersion": "1.9.0dev",
+    "License": "CC0",
+    "Authors": [
+        "Rovai, Antonin"
+    ],
+    "Acknowledgments": "",
+    "HowToAcknowledge": "Include the generated boilerplate in the methods section.",
+    "Funding": [],
+    "ReferencesAndLinks": [
+        ""
+    ],
+    "DatasetDOI": "",
+    "DatasetType": "derivative",
+    "GeneratedBy": [
+        {
+            "Name": "fMRIPost-AROMA",
+            "Version": "0.1.dev1+g5d5b065",
+            "CodeURL": "https://github.com/nipreps/fmripost_aroma/archive/0.1.dev1+g5d5b065.tar.gz"
+        }
+    ],
+    "DatasetLinks": {
+        "input": "/data/connectomix-testdatasets/dsXXX-1",
+        "templateflow": "https://github.com/templateflow/templateflow",
+        "fmriprep": "/data/connectomix-testdatasets/dsXXX-1/derivatives/fmriprep"
+    }
+}
